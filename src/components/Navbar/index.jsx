@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from 'react-router-dom';
 import './style.css';
+import PropTypes from 'prop-types';
 
-export const Navbar = () => {
+// ii dau un obiect cu numele props. se creaza automat in mom in care le folosesc mai jos
+export const Navbar = (props) => {
 	return (
-		<div className="navbar">
+    // orice nu e string trebuie pus intre acolade
+		<div className="navbar" style={{backgroundColor: props.color ?? 'transparent', color: 'white'}}>
 			<div className="logo">
 				<Link to="/">Home</Link>
 			</div>
@@ -19,3 +22,7 @@ export const Navbar = () => {
     </div>
 	);
 };
+
+Navbar.PropTypes = {
+  color: PropTypes.string,
+}
