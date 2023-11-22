@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* desi punem link, tot a este */
+.navbar a {
+    text-decoration: none;
+}
+
+
+.navbar .menu {
+    display: flex;
+    gap: 10px;
+}
