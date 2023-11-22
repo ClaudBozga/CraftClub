@@ -7,8 +7,11 @@ import PropTypes from 'prop-types';
 export const Navbar = (props) => {
 	return (
     // orice nu e string trebuie pus intre acolade
-		<div className="navbar" 
+		<div className="navbar shadow-md" 
     style={{
+      // nullish coalescing operator (??) 
+      // a ?? b
+      // - in situatia in care a nu exista, ia b
       backgroundColor: props.color ?? 'transparent', 
       color: props.textColor ?? 'black'
     }}
