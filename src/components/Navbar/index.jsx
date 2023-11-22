@@ -7,7 +7,12 @@ import PropTypes from 'prop-types';
 export const Navbar = (props) => {
 	return (
     // orice nu e string trebuie pus intre acolade
-		<div className="navbar" style={{backgroundColor: props.color ?? 'transparent', color: 'white'}}>
+		<div className="navbar" 
+    style={{
+      backgroundColor: props.color ?? 'transparent', 
+      color: props.textColor ?? 'black'
+    }}
+    >
 			<div className="logo">
 				<Link to="/">Home</Link>
 			</div>
@@ -25,4 +30,5 @@ export const Navbar = (props) => {
 
 Navbar.PropTypes = {
   color: PropTypes.string,
+  textColor: PropTypes.string,
 }

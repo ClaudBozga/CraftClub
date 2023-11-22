@@ -4,10 +4,13 @@
 }
 
 /* desi punem link, tot a este */
-.navbar a {
-    text-decoration: none;
+.navbar a,
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+	text-decoration: none;
+	color: inherit;
 }
-
 
 .navbar .menu {
     display: flex;

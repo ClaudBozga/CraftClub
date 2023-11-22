@@ -15,7 +15,7 @@ const App = () => {
       <Cart />
       <Details />
       <Home /> */}
-      <Navbar color="#265073" />
+      <Navbar color="#265073" textColor="white" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
