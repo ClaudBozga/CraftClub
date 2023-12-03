@@ -4,6 +4,15 @@
     padding: 5px 0;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 10px;
+}
+
 /* desi punem link, tot a este */
 .navbar a,
 .navbar a:hover,
@@ -13,7 +22,3 @@
 	color: inherit;
 }
 
-.navbar .menu {
-    display: flex;
-    gap: 10px;
-}
