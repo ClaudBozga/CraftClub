@@ -34,4 +34,4 @@ export const Navbar = (props) => {
 Navbar.PropTypes = {
   color: PropTypes.string,
   textColor: PropTypes.string,
-}
+};

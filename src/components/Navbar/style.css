@@ -15,10 +15,25 @@
 
 /* desi punem link, tot a este */
 .navbar a,
-.navbar a:hover,
 .navbar a:focus,
 .navbar a:active {
 	text-decoration: none;
 	color: inherit;
+
 }
 
+.navbar a:hover {
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        color: inherit;
+        opacity: 10;
+        }
+        to {
+        color: rgb(255, 94, 0);
+        opacity: 100;
+        }
+    }

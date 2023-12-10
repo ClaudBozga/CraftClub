@@ -13,7 +13,7 @@ const Admin = () => {
 	useEffect(() => {
 		const fetchProducts = async () => {
 			const response = await fetch(
-				'https://654bc6c15b38a59f28efb3a2.mockapi.io/products'
+				'https://652bdb78d0d1df5273eecec8.mockapi.io/products'
 			);
 			const products = await response.json();
 			setProducts(products);
@@ -23,7 +23,7 @@ const Admin = () => {
 	}, []);
 
 	const addNewProduct = () => {
-		const url = 'https://654bc6c15b38a59f28efb3a2.mockapi.io/products';
+		const url = 'https://652bdb78d0d1df5273eecec8.mockapi.io/products';
 		const options = {
 			method: 'POST',
 			headers: {
@@ -35,7 +35,7 @@ const Admin = () => {
 	};
 
 	const deleteProduct = async (id) => {
-		const url = `https://654bc6c15b38a59f28efb3a2.mockapi.io/products/${id}`;
+		const url = `https://652bdb78d0d1df5273eecec8.mockapi.io/products/${id}`;
 		const options = {
 			method: 'DELETE',
 			headers: {
@@ -106,7 +106,7 @@ const Admin = () => {
 				</div>
 				<button
 					onClick={addNewProduct}
-					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+					className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg my-1"
 				>
 					Save
 				</button>

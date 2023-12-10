@@ -54,6 +54,7 @@ const Home = () => {
 					/>
 					<label htmlFor="filter2"> peste 500 lei</label>
 				</div>
+				
 			</div>
 			<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				{filteredProducts.map((product) => (
