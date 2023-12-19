@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const ProductCard = (props) => {
 	const addProductToCart = (e) => {
 		let productsInCart = [];
-		if(window.localStorage.getItem('cart')) {
+		if (window.localStorage.getItem('cart')) {
 			productsInCart = JSON.parse(window.localStorage.getItem('cart'));
 		}
 
@@ -20,7 +21,7 @@ const ProductCard = (props) => {
 
 		window.localStorage.setItem('cart', JSON.stringify(productsInCart));
 	};
-	
+
 	return (
 		<div
 			key={props.product.id}
@@ -29,11 +30,11 @@ const ProductCard = (props) => {
 			<img src={props.product.imageURL} alt={props.product.name} />
 
 			<div className="mt-4 px-5 pb-5">
-				<a href="#">
-					<h5 className="text-xl tracking-tight text-slate-900">
-						{props.product.name}
-					</h5>
-				</a>
+				<Link to={"/details/props.product.id"}>
+					{<h5 className="text-xl tracking-tight text-slate-900">
+					{props.product.name}
+					</h5>}
+				</Link>
 				<div className="mt-2 mb-5 flex items-center justify-between">
 					<p>
 						<span className="text-3xl font-bold text-slate-900">
@@ -47,7 +48,7 @@ const ProductCard = (props) => {
 					onClick={addProductToCart}
 				>
 					Add to cart
-					
+
 				</button>
 			</div>
 		</div>
